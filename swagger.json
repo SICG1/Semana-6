@@ -1,0 +1,35 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Ejemplo API",
+    "version": "1.0.0",
+    "description": "API de ejemplo para reservar horas"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000",
+      "description": "Servidor Local"
+    }
+  ],
+  "paths": {
+    "/horarios": {
+      "get": {
+        "summary": "Obtiene los horarios disponibles",
+        "responses": {
+          "200": {
+            "description": "Una lista de horarios",
+            "content": {
+              "application/json": {
+                "example": {
+                  "fecha": "2024-04-20",
+                  "hora": "09:00",
+                  "estado": "reservado"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
